@@ -1,0 +1,79 @@
+body {
+    background-color: #1e2024;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cardLogin {
+    margin-top: 150px;
+    margin-left: 300px;
+}
+#loginForm {
+    background-color: #1e2024!important;
+    margin: 0 auto;
+}
+
+#formCard {
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#enterButton {
+    border: 1px solid #FF6A48;
+    background-color: #1e2024;
+    margin-left: 75px;
+}
+
+#enterButton:hover {
+    background-color: #FF6A48;
+
+}
+
+#createAccount {
+    color: #FF6A48;
+}
+
+#createAccount:hover {
+    color: #FFFFFF;
+}
+
+#header{
+    background-color: #2B2D32;
+    height: 60px;
+    -moz-box-shadow: 1px 1px 3px 1px #101012;
+    -webkit-box-shadow: 1px 1px 3px 1px #101012;
+     box-shadow: 1px 1px 3px 1px #101012;
+}
+
+#logoHeader {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+#searchInput {
+    background-color: #ffffff;
+    width: 200px;
+    height: 30px;
+    margin-left: 299px;
+    margin-top: 14px;
+    padding-top:5px;
+    
+}
+
+.browser-default{
+    margin-top: 54px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.genreOptions {
+    color: #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+}
+
+option:hover {
+    background-color: #FF6A48;
+}
+
+.fa-search {
+    color:#FF6A48;
+}
