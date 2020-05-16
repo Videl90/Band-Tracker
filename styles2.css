@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.header {
+    background-color: #1E2024;
+    height: 100px;
+    margin: 0 !important;
+    padding: 20px;
+}
+
+.header .logo {
+    float: left;
+    margin-top: 12px;
+    margin-left: 200px;
+}
+
+.row .input-field {
+    float: right;
+    left: 230px;
+    top: -10px;
+}
+
+.row .input-field input {
+    color: white;
+}
+
+/*ASIDE---------------------------------------------*/
+.aside {
+    width: 26%;
+    float: left;
+}
+
+.main-container .row {
+    background-color: #2B2D32;
+}
+
+.main-container .band-info {
+    background-color: #2B2D32;
+    position: relative;
+}
+
+/*Band Info-------------------*/
+.main-container .aside .row .col .card .card-image img{
+    width: 100%;
+    height: auto;
+}
+
+.main-container .aside .row .col .card .card-image .band-info .col #follow {
+    float: right;
+    color: #FF6A48;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.main-container .aside .row .col .card .card-image .band-info .col .social-media {
+    background-color: #2B2D32;
+    width: 50%;
+    float: left;
+}
+
+#main-info {
+    margin-top: 15px;
+}
+
+#fb-logo {
+    border-radius: 50%;
+    /*width: 25px;
+    height: 20px;*/
+    cursor: pointer;
+    float: left;
+}
+
+#info-container {
+    margin-top: 40px;
+}
+
+#website-logo {
+    border-radius: 50%;
+    /*width: 25px;
+    height: 20px;*/
+    cursor: pointer;
+    float: right;
+    /*margin-right: 60px;*/
+}
+
+#info-container li {
+    margin-top: 5px;
+    margin-top: 18px;
+}
+
+#band-information {
+    color: #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+}
+
+.main-container .aside .band-info .col_12 .info-container {
+    float: left;
+    margin-top: 5px;
+    width: 100%;
+    margin-left: -15px;
+}
+
+.main-container .aside .band-info .col_12 .info-container .list {
+    color: #FF6A48;
+}
+
+/*BODY----------------------------------------------*/
+.main-container {
+    margin-top: 30px;
+}
+
+.display-info {
+    width: 72%;
+    background-color: #2B2D32;
+    float: right;
+    left: 20px;
+}
+
+/*h5 ABOUT*/
+.display-info .band-bio .about {
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6A48;
+    font-size: 18px;
+}
+
+/*Band info*/
+.display-info .band-bio .description {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+}
+
+/*H5 UPCOMING EVENTS*/
+#concert-dates .upcoming{
+    color: #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+/*Events Info*/
+#table-info {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/*Tickets Button*/
+#tickets {
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 1px #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6A48;
+    padding: 5px;
+}
+
+/*Search button*/
+#bandSearch {
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 1px #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6A48;
+    padding: 5px;
+}
+
+.colorWhite {
+    font-size: 16px;
+    color: white;
+}
+
+.colorOrange {
+    font-size: 16px;
+    color: #FF6A48;
+}
+
+#search {
+    width: 70%;
+    margin: 30px auto ;
+}
+
+#icon_prefix {
+    color: white;
+    font-size: 20px;
+}
+
+#container {
+    display: none;
+}
+
+.error-message {
+    border: solid 1px #FF6A48;
+    border-radius: 0.3em;
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    display: none;
+}
