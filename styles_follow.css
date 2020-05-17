@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.header {
+    background-color: #1E2024;
+    height: 100px;
+    margin: 0 !important;
+    padding: 20px;
+}
+
+.header .logo {
+    float: left;
+    margin-top: 12px;
+    margin-left: 200px;
+}
+
+
+/*Bands you are following*/
+.title {
+    font-size: 24px;
+    color: #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container .aside .row .col .card .card-image img{
+    width: 100%;
+    height: auto;
+}
+
+.image {
+    width: 100%;
+}
+
+.text {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/*#container {
+    float: left;
+}*/
+
+.green {
+    color: rgb(27, 212, 3);
+}
