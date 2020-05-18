@@ -49,12 +49,16 @@ body {
     height: auto;
 }
 
-.main-container .aside .row .col .card .card-image .band-info .col #follow {
+ #follow {
     float: right;
     color: #FF6A48;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+}
 
+#follow:hover {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
 }
 
 .main-container .aside .row .col .card .card-image .band-info .col .social-media {
@@ -152,7 +156,7 @@ body {
 }
 
 /*Tickets Button*/
-#tickets {
+.tickets {
     border-radius: 0.3em;
     cursor: pointer;
     background-color: transparent;
@@ -160,6 +164,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #FF6A48;
     padding: 5px;
+}
+
+.tickets:hover {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    border: solid 1px rgb(28, 196, 70);
 }
 
 /*Search button*/
@@ -201,10 +211,19 @@ body {
     border: solid 1px #FF6A48;
     border-radius: 0.3em;
     padding: 20px;
-    height: 300px;
+    height: 100px;
     text-align: center;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     display: none;
+    width: 60%;
+    margin: 10px auto;
+    padding-top: 20px;
+}
+
+.text {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
