@@ -1,5 +1,6 @@
 var bandName = "";
 var bandsArray = [];
+var allVenues = [];
 
 //Conditon to get the empty array or the array with the current
 //artists.
@@ -52,6 +53,7 @@ $("#bandSearch").on('click',function(){
     //API to get the upcoming events
     var queryURL2 = "https://rest.bandsintown.com/artists/" + bandName + "/events/?app_id=" + apiKEY;
     console.log(queryURL2);
+    allVenues = [];
     $.ajax({
         url: queryURL2,
         method: 'GET'
@@ -61,6 +63,8 @@ $("#bandSearch").on('click',function(){
             var eventDate = events[i].datetime;
             var eventVenue = events[i].venue.name;
             var location = events[i].venue.city;
+            allVenues.push(eventVenue);
+            console.log(allVenues);
             var row = $("<tr>")
             var button = $("<button>")
             button.addClass("tickets").text("BUY TICKETS");
@@ -84,13 +88,13 @@ $("#bandSearch").on('click',function(){
             $("#listeners").text(information.artist.stats.listeners);
             $("#playcount").text(information.artist.stats.playcount);
             for (var j = 0; j < 4; j++){
-                var img = $("<img>");
+                //var img = $("<img>");
                 var similarArtist = $("<p>");
                 similarArtist.addClass("text");
                 var container = $("<div>");
                 var artists = similarArtist.text(information.artist.similar.artist[j].name);
-                //var bandImage = img.attr('src', information.artist.similar.artist[j].);
-                img.addClass("image");
+                //var bandImage = img.attr('src', information.artist.similar.artist[j].image[1]["#text"]);
+                //img.addClass("image");
                 var eachBand = container.append(artists);
                 eachBand.addClass("card-image col lg12 col md6 col s3")
                 $("#eachBand").append(eachBand);
@@ -101,14 +105,12 @@ $("#bandSearch").on('click',function(){
 
 
 //Button to follow an artist
-$(".follow").on('click',function(){
-    for (var i = 0; i < bandsArray.length; i++) {
-        if (bandName === bandsArray[i]) {
-            console.log("Band already followed");
-        } else {
-            console.log(bandName);
-            bandsArray.push(bandName);
-            localStorage.setItem("followBand",bandsArray);
-        }
-    }
+$("#follow").on('click',function(){
+    console.log(bandsArray);
+    bandsArray.push(bandName);
+    localStorage.setItem("followBand",bandsArray);
+})
+
+$(".tickets").on('click',function(){
+    console.log($(this).text());
 })

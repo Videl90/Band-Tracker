@@ -15,6 +15,7 @@ $(document).ready(function(){
             var band = $("<p>");
             band.addClass("text");
             var container = $("<div>");
+            container.addClass('cardArtist')
             var bandFollowed = band.text(response.name);
             var bandImage = img.attr('src',response.image_url);
             img.addClass("image");
