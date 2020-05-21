@@ -64,6 +64,18 @@ body {
     transition: 0.2s;
 }
 
+#unfollow {
+    float: left;
+    color: #FF6A48;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#unfollow:hover {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+}
+
 .main-container .aside .row .col .card .card-image .band-info .col .social-media {
     background-color: #2B2D32;
     width: 50%;

@@ -125,5 +125,17 @@ $("#follow").on('click',function(){
             bandsArray.push(bandName);
         }
    localStorage.setItem("followBand",bandsArray);
+   alert("Now you are following " + bandName + "!");
 })
 
+
+$("#unfollow").on('click',function(){
+    console.log(typeof(bandsArray));
+    if (typeof bandsArray === "string") {
+        bandsArray = bandsArray.split(",");
+    }       
+    var index = bandsArray.indexOf(bandName);
+    bandsArray.splice(index,1);
+   localStorage.setItem("followBand",bandsArray);
+   alert("Band Unfollowed!");
+})
