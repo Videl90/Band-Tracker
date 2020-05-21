@@ -52,28 +52,12 @@ body {
     height: auto;
 }
 
- #follow {
+.main-container .aside .row .col .card .card-image .band-info .col #follow {
     float: right;
     color: #FF6A48;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-}
 
-#follow:hover {
-    color: rgb(28, 196, 70);
-    transition: 0.2s;
-}
-
-#unfollow {
-    float: right;
-    color: #FF6A48;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#unfollow:hover {
-    color: rgb(28, 196, 70);
-    transition: 0.2s;
 }
 
 .main-container .aside .row .col .card .card-image .band-info .col .social-media {
@@ -82,41 +66,11 @@ body {
     float: left;
 }
 
-#main-info {
-    margin-top: 15px;
-}
-
-#fb-logo {
-    border-radius: 50%;
-    /*width: 25px;
-    height: 20px;*/
-    cursor: pointer;
-    float: left;
-}
-
-#info-container {
-    margin-top: 40px;
-}
-
-#website-logo {
-    border-radius: 50%;
-    /*width: 25px;
-    height: 20px;*/
-    cursor: pointer;
-    float: right;
-    /*margin-right: 60px;*/
-}
-
-#info-container li {
-    margin-top: 5px;
-    margin-top: 18px;
-}
 
 #band-information {
     color: #FF6A48;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
-    margin-top: 150px;
 }
 
 .main-container .aside .band-info .col_12 .info-container {
@@ -137,6 +91,7 @@ body {
 
 .display-info {
     width: 72%;
+    background-color: #2B2D32;
     float: right;
     left: 20px;
 }
@@ -170,6 +125,15 @@ body {
     font-size: 14px;
 }
 
+.bandName {
+    font-weight: bold;
+}
+
+.venueName {
+    color: rgb(28, 196, 70);
+}
+
+
 /*Tickets Button*/
 .tickets {
     border-radius: 0.3em;
@@ -187,86 +151,43 @@ body {
     border: solid 1px rgb(28, 196, 70);
 }
 
-/*Search button*/
-#bandSearch {
-    border: 1px solid #FF6A48;
-    background-color: #1e2024;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
+
+#button-add {
+    background-color: #FF6A48;
+    font-style: normal;
+    width: 40px;
+    height: 40px;
+    margin-left:10px;
+    margin-top: -10px;
 }
 
-#bandSearch:hover{
-    color: rgb(28, 196, 70);
-    transition: 0.2s;
-    border: solid 1px rgb(28, 196, 70);
+
+#button-rest {
+    background-color: #FF6A48;
+    font-style: normal;
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
 }
 
-.colorWhite {
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
+    
+.material.icons {
+   
+    font-style: normal;
 }
 
-.colorOrange {
-    font-size: 16px;
-    color: #FF6A48;
+#counterNum {
+    font-size: 24px;
+    display: inline;
+    margin-left:10px;
+    background-color: tra;
+   
 }
 
-#search {
-    width: 70%;
-    margin: 30px auto ;
+#buyButton {
+    margin-top: 35px;
 }
 
-#icon_prefix {
-    color: white;
-    font-size: 20px;
-}
-
-#container {
-    display: none;
-}
-
-.error-message {
-    border: solid 1px #FF6A48;
-    border-radius: 0.3em;
-    padding: 20px;
-    height: 100px;
-    text-align: center;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    display: none;
-    width: 60%;
-    margin: 10px auto;
-    padding-top: 20px;
-}
-
-.text {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
-#nextEvent {
-    text-align: right;
-    margin-right: 16px;
-}
-
-/*AGREGAR*/
-thead {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: #FF6A48;
-}
-
-#alreadyfollow {
-    float: right;
-    color: rgb(28, 196, 70);
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-}
 
 /*MODAL STYLES*/
 
@@ -313,8 +234,14 @@ thead {
 }
 
 .rock {
-    padding-top:3px;
+    margin-top:10px;
 }
+/*.modal-trigger {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    background-color: transparent;
+    border: solid 1px rgb(28, 196, 70);
+}*/
 
 /*Media Queries*/
 
@@ -324,10 +251,6 @@ thead {
         line-height: 64px;
         float: right;
     }
-
-    .display-info {
-        float: none;
-    }
 }
 
 @media only screen and (max-width: 992px){
@@ -335,8 +258,5 @@ thead {
         /* height: 64px; */
         line-height: 64px;
         float: right;
-    }
-    .display-info {
-        float: none;
     }
 }

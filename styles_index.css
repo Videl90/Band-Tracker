@@ -1,0 +1,57 @@
+body {
+    background-color: #1e2024;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*FORM STYLES*/
+
+#cardLogin {
+    margin-top: 150px;
+    margin-left: 10%;
+}
+#loginForm {
+    background-color: #1e2024!important;
+    margin: 0 auto;
+}
+
+#formCard {
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#logo {
+    margin-left: 19px;
+}
+
+#password {
+    color: #ffffff;
+}
+
+#email {
+    color: #ffffff;
+}
+
+#enterButton {
+    border: 1px solid #FF6A48;
+    background-color: #1e2024;
+    margin-top: 30px;
+}
+
+#enterButton:hover {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    border: solid 1px rgb(28, 196, 70);
+
+}
+
+#createAccount {
+    color: #FF6A48;
+}
+
+#createAccount:hover {
+    color: #FFFFFF;
+}
+
+
+
+

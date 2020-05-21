@@ -3,56 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band Profile</title>
+    <title>Event Search</title>
+    <link rel="shortcut icon" type="image/png" href="Images/rock.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles_events.css" media="all" /> 
 </head>
 <body>
+
+    <!--Here is the NAV-->
     <header>
-        <div class="row header">|
-            <div class="logo col s3">
-                <img src="Images_2/logo.png">
+        <nav>
+            <div class="nav-wrapper">
+                
+                    <a href="#" class="logoHeader"><img class="logo" src="Images/logo-header.png"/></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                   
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="events.html">events</a></li>
+                        <li><a href="follow.html">following</a></li>
+                    </ul>
             </div>
-            <!--<form class="col s5">-->
-            <!--</form>-->
-        </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">home</a></li>
+            <li><a href="events.html">events</a></li>
+            <li><a href="follow.html">following</a></li>
+        </ul>
     </header>
 
     <div class="col s12 search" id="search">
         <div class="input-field col s2">
             <input id="icon_prefix" type="text" class="validate">
             <label for="icon_prefix"><i class="fas fa-search"></i></label>
-            <button id="bandSearch">Search</button>
+            <button id="bandSearch" class="waves-effect waves-light btn-small">SEARCH</button>
         </div>
     </div>
 
+    <!--Here is the NAV-->
     <main class="container main-container" id="container">
-        <aside class="aside col s12 ">
-            <div class="row">
-                <div class="col s12 m12">
+        <aside class="aside">
+            <div class="row col s8">
+                <div class="col s12">
                 <div class="card">
                     <!--Div to insert the image of the band-->
-                    <div class="card-image">
+                    <div class="card-image s12">
                       <img id="bandImage" src="">
                         <div class="row band-info">
                             <div class="col s12" id="main-info">
                                 <!--Div to insert the src of the band's media-->
                                 <div class="social-media" id="social-media">
                                     <div class="fb-logo col s4 m4 l4" id="fb-logo">
-                                        <a id="fblink"></a><img src="Images_2/fblogo.png"></a>
+                                        <a id="fblink" href="" target="_blank"><img src="Images_2/fblogo.png"></a>
                                     </div>
-                                    <div class="website-logo col s4 m4 l4" id="website-logo">
-                                        <a id="websitelink" href=""><img src="Images_2/website.png"></a>
-                                    </div>
+                                    <!--<div class="website-logo col s4 m4 l4" id="website-logo">
+                                        <a id="websitelink" href="" target="_blank"><img src="Images_2/website.png"></a>
+                                    </div>-->
                                 </div>
                                     <!--Button to follow the band (storage)-->
-                                    <a href="#" id="follow" class="follow">FOLLOW +</a>
+                                    <div id="modal1" class="modal">
+                                        <div class="modal-content">
+                                        <p class="redirect">Now you are following <span class="artistNameSpan"></span> ! </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">HELL YEAH!<img class="rock" src= "Images/rock.png"></a>
+                                        </div>
+                                    </div>
+                                    <div id="follow"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">FOLLOW +</a></div> 
+                                    <div id="modal2" class="modal">
+                                        <div class="modal-content">
+                                        <p class="redirect">You unfollowed <span class="artistNameSpan"></span>! </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OPS!<img class="rock" src= "Images/rock.png"></a>
+                                        </div>
+                                    </div>
+                                    <div id="unfollow"><a class="waves-effect waves-light btn modal-trigger" href="#modal2">UNFOLLOW +</a></div> 
+                                
+
                                     <!--Div where all the band info is append-->
                                     <div class="info-container" id="info-container">
                                         <ul id="band-information" class="list">
-                                            <li class="colorOrange"><strong>Name: <span class="colorWhite" id="artistName"></span></strong></li>
+                                            <li class="colorOrange"><strong>Name: <span class="colorWhite artistNameSpan" id="artistName"></span></strong></li>
                                             <li class="colorOrange"><strong>Monthly Listeners: <span class="colorWhite" id="listeners"></span></strong></li>
                                             <li class="colorOrange"><strong>Playcount: <span class="colorWhite" id="playcount"></span></strong></li>
                                         </ul>
@@ -66,25 +100,32 @@
             </div>
         </aside>
 
-        <div class="display-info">
-            <div class="band-bio">
+        <div class="display-info col s6 m12 l12">
+            <div class="band-bio col s6 m12 l12">
                 <div class="row">
                     <div class="col s12">
                         <h5 class="about">SIMILAR ARTISTS</h5>
                         <!--Similar bands-->
-                        <div class="row" id="eachBand">
-                        </div>
+                        <div class="row" id="eachBand"></div>
+                        <div class="row" id="nextEvent"></div>
                     </div>
                 </div>
             </div>
             <div class="upcoming-dates">
                 <div class="row">
                     <!--Upcoming events-->
-                    <div class="col s12" id="concert-dates">
+                    <div class="col s6 m12 l12" id="concert-dates">
                         <h5 class="upcoming">UPCOMING DATES</h5>
                         <table class="table" id="table-info">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Location</th>
+                                    <th>City</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                
                                     <!--Button that sends you to the ticketmaster API-->
                                     <!--<td><button id="tickets">BUY TICKETS</button></td>-->
                                 
@@ -101,7 +142,16 @@
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
     <script src="events.js"></script>
+    <script>
+        //COLLAPSIBLE MENU//
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                });
+
+                $('.modal').modal();
+    </script>
 </body>
 </html>
