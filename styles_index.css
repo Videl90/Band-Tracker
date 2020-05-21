@@ -38,7 +38,9 @@ body {
 }
 
 #enterButton:hover {
-    background-color: #FF6A48;
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    border: solid 1px rgb(28, 196, 70);
 
 }
 

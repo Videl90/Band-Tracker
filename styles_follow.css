@@ -29,11 +29,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.main-container .aside .row .col .card .card-image img{
-    width: 100%;
-    height: auto;
-}
-
 .image {
     width: 100%;
 }
@@ -66,6 +61,13 @@ body {
         line-height: 64px;
         float: right;
     }
+    
+    .cardArtist {
+        float:none!important;
+        margin-left:10px!important;
+    }
+
+    
 }
 
 @media only screen and (max-width: 992px){
@@ -74,5 +76,12 @@ body {
         line-height: 64px;
         float: right;
     }
+
+    .cardArtist {
+        float:none!important;
+        margin-left:10px!important;
+    }
+
+
 }
 

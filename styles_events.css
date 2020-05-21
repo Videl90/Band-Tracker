@@ -65,7 +65,7 @@ body {
 }
 
 #unfollow {
-    float: left;
+    float: right;
     color: #FF6A48;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -116,6 +116,7 @@ body {
     color: #FF6A48;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
+    margin-top: 150px;
 }
 
 .main-container .aside .band-info .col_12 .info-container {
@@ -136,7 +137,6 @@ body {
 
 .display-info {
     width: 72%;
-    background-color: #2B2D32;
     float: right;
     left: 20px;
 }
@@ -197,7 +197,9 @@ body {
 }
 
 #bandSearch:hover{
-    background-color: #FF6A48;
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    border: solid 1px rgb(28, 196, 70);
 }
 
 .colorWhite {
@@ -266,6 +268,54 @@ thead {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*MODAL STYLES*/
+
+.modal {
+    background-color: #2B2D32;
+}
+
+.modal-footer {
+    background-color: #000000;
+}
+
+.modalH4 {
+    color: rgb(28, 196, 70);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.redirect {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-close {
+    color: #FF6A48;
+}
+
+.waves-effect {
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 1px #FF6A48;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6A48;
+    margin-top: 20px;
+
+}
+
+.waves-effect:hover {
+    color: rgb(28, 196, 70);
+    transition: 0.2s;
+    background-color: transparent;
+    border: solid 1px rgb(28, 196, 70);
+
+}
+
+.rock {
+    padding-top:3px;
+}
+
 /*Media Queries*/
 
 @media only screen and (max-width: 601px){
@@ -274,6 +324,10 @@ thead {
         line-height: 64px;
         float: right;
     }
+
+    .display-info {
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 992px){
@@ -281,5 +335,8 @@ thead {
         /* height: 64px; */
         line-height: 64px;
         float: right;
+    }
+    .display-info {
+        float: none;
     }
 }

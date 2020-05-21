@@ -12,8 +12,8 @@
 </head>
 <body>
 
+    <!--Here is the NAV-->
     <header>
-        
         <nav>
             <div class="nav-wrapper">
                 
@@ -42,13 +42,14 @@
         </div>
     </div>
 
+    <!--Here is the NAV-->
     <main class="container main-container" id="container">
-        <aside class="aside col s12 ">
-            <div class="row">
-                <div class="col s12 m12">
+        <aside class="aside">
+            <div class="row col s8">
+                <div class="col s12">
                 <div class="card">
                     <!--Div to insert the image of the band-->
-                    <div class="card-image">
+                    <div class="card-image s12">
                       <img id="bandImage" src="">
                         <div class="row band-info">
                             <div class="col s12" id="main-info">
@@ -62,12 +63,30 @@
                                     </div>-->
                                 </div>
                                     <!--Button to follow the band (storage)-->
-                                    <a href="#" id="follow" class="follow">FOLLOW +</a>
-                                    <a href="#" id="unfollow" class="follow">UNFOLLOW +</a>
+                                    <div id="modal1" class="modal">
+                                        <div class="modal-content">
+                                        <p class="redirect">Now you are following <span class="artistNameSpan"></span> ! </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">HELL YEAH!<img class="rock" src= "Images/rock.png"></a>
+                                        </div>
+                                    </div>
+                                    <div id="follow"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">FOLLOW +</a></div> 
+                                    <div id="modal2" class="modal">
+                                        <div class="modal-content">
+                                        <p class="redirect">You unfollowed <span class="artistNameSpan"></span>! </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OPS!<img class="rock" src= "Images/rock.png"></a>
+                                        </div>
+                                    </div>
+                                    <div id="unfollow"><a class="waves-effect waves-light btn modal-trigger" href="#modal2">UNFOLLOW +</a></div> 
+                                
+
                                     <!--Div where all the band info is append-->
                                     <div class="info-container" id="info-container">
                                         <ul id="band-information" class="list">
-                                            <li class="colorOrange"><strong>Name: <span class="colorWhite" id="artistName"></span></strong></li>
+                                            <li class="colorOrange"><strong>Name: <span class="colorWhite artistNameSpan" id="artistName"></span></strong></li>
                                             <li class="colorOrange"><strong>Monthly Listeners: <span class="colorWhite" id="listeners"></span></strong></li>
                                             <li class="colorOrange"><strong>Playcount: <span class="colorWhite" id="playcount"></span></strong></li>
                                         </ul>
@@ -81,8 +100,8 @@
             </div>
         </aside>
 
-        <div class="display-info">
-            <div class="band-bio">
+        <div class="display-info col s6 m12 l12">
+            <div class="band-bio col s6 m12 l12">
                 <div class="row">
                     <div class="col s12">
                         <h5 class="about">SIMILAR ARTISTS</h5>
@@ -95,7 +114,7 @@
             <div class="upcoming-dates">
                 <div class="row">
                     <!--Upcoming events-->
-                    <div class="col s12" id="concert-dates">
+                    <div class="col s6 m12 l12" id="concert-dates">
                         <h5 class="upcoming">UPCOMING DATES</h5>
                         <table class="table" id="table-info">
                             <thead>
@@ -131,6 +150,8 @@
             $(document).ready(function(){
                 $('.sidenav').sidenav();
                 });
+
+                $('.modal').modal();
     </script>
 </body>
 </html>

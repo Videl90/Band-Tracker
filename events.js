@@ -36,7 +36,7 @@ $("#bandSearch").on('click',function(){
                 artistName = response.name;
                 var website = response.facebook_page_url;
                 var bandImage = response.image_url;
-                $("#artistName").append(artistName);
+                $(".artistNameSpan").append(artistName);
                 $("#fblink").attr('href',website);
                 $('#bandImage').attr('src',bandImage);
             } else {
@@ -107,7 +107,7 @@ $("#bandSearch").on('click',function(){
                 button.attr("href", "buytickets.html");
             })
             button.addClass("tickets").text("NEXT EVENT");
-            $("#nextEvent").append(button);
+            $("#nextEvent").html(button);
         })
     })
 })
@@ -125,7 +125,8 @@ $("#follow").on('click',function(){
             bandsArray.push(bandName);
         }
    localStorage.setItem("followBand",bandsArray);
-   alert("Now you are following " + bandName + "!");
+   
+   
 })
 
 
@@ -137,5 +138,6 @@ $("#unfollow").on('click',function(){
     var index = bandsArray.indexOf(bandName);
     bandsArray.splice(index,1);
    localStorage.setItem("followBand",bandsArray);
-   alert("Band Unfollowed!");
 })
+
+//$('.modalFollow').modal();//

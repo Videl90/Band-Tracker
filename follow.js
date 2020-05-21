@@ -18,12 +18,12 @@ $(document).ready(function(){
             var band = $("<p>");
             band.addClass("text");
             var container = $("<div>");
-            container.addClass('cardArtist')
+            container.addClass('cardArtist col s3')
             var bandFollowed = band.text(response.name);
             var bandImage = img.attr('src',response.image_url);
             img.addClass("image");
             var eachBand = container.append(bandImage,bandFollowed);
-            eachBand.addClass("card-image col lg12 col md6 col s3")
+            eachBand.addClass("card-image col s3")
             $("#eachBand").append(eachBand);
         })
     }
