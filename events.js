@@ -80,7 +80,7 @@ $("#bandSearch").on('click',function(){
         //API to get similar artists, listeners and playcount
         console.log(bandName);
         var apiKEY2 = "bed52730fbe111f6add92609042505dc";
-        var queryURL3 = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + bandName + "&api_key=" + apiKEY2 + "&format=json";
+        var queryURL3 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + bandName + "&api_key=" + apiKEY2 + "&format=json";
         console.log(queryURL3);
         $("#eachBand").empty();
         $.ajax({
