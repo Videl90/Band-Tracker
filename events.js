@@ -115,18 +115,15 @@ $("#bandSearch").on('click',function(){
 
 //Button to follow an artist
 $("#follow").on('click',function(){
-    console.log(bandsArray);
     console.log(typeof(bandsArray));
     if (typeof bandsArray === "string") {
         bandsArray = bandsArray.split(",");
-    }
-    bandsArray.push(bandName);
-    localStorage.setItem("followBand",bandsArray);
-
-    /*for (var i = 0; i < bandsArray.length; i++) {        
-        if (bandName === bandsArray[i]) {            
-            console.log("Band already followed");        
-        } 
-    }*/   
+    }       
+        if (bandsArray.includes(bandName)) {            
+            alert("Band already followed");        
+        } else {
+            bandsArray.push(bandName);
+        }
+   localStorage.setItem("followBand",bandsArray);
 })
 

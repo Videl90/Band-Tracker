@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band Profile</title>
+    <title>Event Search</title>
+    <link rel="shortcut icon" type="image/png" href="Images/rock.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -15,15 +16,22 @@
         
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="logoHeader"><img src="Images/logo-header.png"/></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">home</a></li>
-                <li><a href="events.html">events</a></li>
-                <li><a href="follow.html">following</a></li>
-            </ul>
+                
+                    <a href="#" class="logoHeader"><img class="logo" src="Images/logo-header.png"/></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                   
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="events.html">events</a></li>
+                        <li><a href="follow.html">following</a></li>
+                    </ul>
             </div>
         </nav>
-        
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">home</a></li>
+            <li><a href="events.html">events</a></li>
+            <li><a href="follow.html">following</a></li>
+        </ul>
     </header>
 
     <div class="col s12 search" id="search">
@@ -114,7 +122,14 @@
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
     <script src="events.js"></script>
+    <script>
+        //COLLAPSIBLE MENU//
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                });
+    </script>
 </body>
 </html>

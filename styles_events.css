@@ -5,16 +5,15 @@ body {
 
 .nav-wrapper{
     background-color: #2B2D32;
-    height: 60px;
+    height: 77px;
     -moz-box-shadow: 1px 1px 3px 1px #101012;
     -webkit-box-shadow: 1px 1px 3px 1px #101012;
      box-shadow: 1px 1px 3px 1px #101012;
-    padding-top: 12px;
     padding-left: 35px;
 }
 
-.logoHeader {
-    padding-top: 10px;
+.logo {
+    padding-top: 12px;
     padding-left: 30px;
 }
 
@@ -238,4 +237,37 @@ body {
 #nextEvent {
     text-align: right;
     margin-right: 16px;
+}
+
+/*AGREGAR*/
+thead {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #FF6A48;
+}
+
+#alreadyfollow {
+    float: right;
+    color: rgb(28, 196, 70);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 601px){
+    .nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        /* height: 64px; */
+        line-height: 64px;
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        /* height: 64px; */
+        line-height: 64px;
+        float: right;
+    }
 }

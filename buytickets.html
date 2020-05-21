@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band Profile</title>
+    <title>Buy Tickets</title>
+    <link rel="shortcut icon" type="image/png" href="Images/rock.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles3.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" href="styles_buytickets.css" media="all" /> 
 </head>
 <body>
     <header>
         
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="logoHeader"><img src="Images/logo-header.png"/></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">home</a></li>
-                <li><a href="events.html">events</a></li>
-                <li><a href="follow.html">following</a></li>
-            </ul>
+                
+                    <a href="#" class="logoHeader"><img class="logo" src="Images/logo-header.png"/></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                   
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="events.html">events</a></li>
+                        <li><a href="follow.html">following</a></li>
+                    </ul>
             </div>
         </nav>
-        
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">home</a></li>
+            <li><a href="events.html">events</a></li>
+            <li><a href="follow.html">following</a></li>
+        </ul>
     </header>
 
     <main class="container main-container" id="container">
@@ -65,21 +73,21 @@
                                     </td>
                                     <td>
                                         <div class="row" id="ticketCounter">
-                                            <a id="button-add" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                                            <a id="button-rest" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons"><img src="Images/minus.png"></i></a>
                                             <div id="counterNum">0</div>
-                                            <a id="button-rest" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></a>
-                                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                                            <a id="button-add" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons"><img src="Images/plus.png"></i></a>
 
                                                 <!-- Modal Structure -->
                                                 <div id="modal1" class="modal">
                                                     <div class="modal-content">
-                                                    <h4>Wait a moment</h4>
-                                                    <p>You're being redirected to ticketweb.com to finsh your purchase of <span id="ticketNumber"></span> tickets</p>
+                                                    <h4 class="modalH4">Confirm your number of tickets</h4>
+                                                    <p class="redirect">Are you sure you want <span id="ticketNumber"></span> tickets?</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">HELL YEAH! <img class="rock" src="Images/rock.png"></a>
                                                     </div>
                                                 </div>
+                                            <div><a class="waves-effect waves-light btn modal-trigger" href="#modal1">CONFIRM</a></div>    
                                             <div id="buyButton"></div>
                                         </div>
                     
@@ -97,6 +105,12 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
-    <script src="script3.js"></script>
+    <script src="script_buytickets.js"></script>
+    <script>
+        //COLLAPSIBLE MENU//
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                });
+    </script>
 </body>
 </html>

@@ -33,7 +33,8 @@ console.log(queryURL);
         $(".eventHour").text(hour);
         $(".cityName").text(city + ", " + country);
 
-        button =  $("<a>").on("click", function(){
+        button =  $("<a>").click("click", function(){
+            console.log ("hola")
             button.attr("href", ticketLink);
             button.attr("target", "_blank");
         })
@@ -76,8 +77,7 @@ console.log(queryURL);
         $("#counterNum").text(count);
         $('.modal').modal();
         $("#ticketNumber").text(count);
-    })
-
     
+    })
 
 })
