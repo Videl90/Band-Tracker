@@ -1,6 +1,9 @@
 var apiKEY = "105d4ded77051c3ef0322214703f7bb8";
 
 $(document).ready(function(){
+   
+      
+    //FOLLOWING BANDS FUNCTIONS//  
     var bandName = localStorage.getItem('followBand');
     bandName = bandName.split(",");
     for (var i = 0; i < bandName.length; i++) {
@@ -15,6 +18,7 @@ $(document).ready(function(){
             var band = $("<p>");
             band.addClass("text");
             var container = $("<div>");
+            container.addClass('cardArtist')
             var bandFollowed = band.text(response.name);
             var bandImage = img.attr('src',response.image_url);
             img.addClass("image");

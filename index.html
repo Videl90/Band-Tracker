@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
-    <body>
-
         
     <body>
         <div class="container">
             <div class="row">
-                <div id="cardLogin" class="col s12 m6">
+                <div id="cardLogin" class="col m6 l8">
                 <div id="logo"><img src="Images/logo.png"/></div>
                 <div id="loginForm" class="card blue-grey darken-1">
                     <div id="formCard" class="card-content white-text">
@@ -33,21 +31,20 @@
                               <input id="password" type="text" class="validate">
                               <label for="password">Password</label>
                               <span class="helper-text" data-error="wrong" data-success="right"></span>
+                              <a id="enterButton" class="waves-effect waves-light btn-small">ENTER</a>
                             </div>
                           </div>
                         </form>
                       </div>
                             
                     </div>
-                    <div class="card-action">
+                    <div class="card-action col s12">
                     <a id="createAccount" href="#">CREATE AN ACCOUNT</a>
-                    <a id="enterButton" class="waves-effect waves-light btn-small">ENTER</a>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
-      </body>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>

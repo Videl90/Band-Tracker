@@ -1,21 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: black;
+    background-color: #1e2024;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.header {
-    background-color: #1E2024;
-    height: 100px;
-    margin: 0 !important;
-    padding: 20px;
+.nav-wrapper{
+    background-color: #2B2D32;
+    height: 60px;
+    -moz-box-shadow: 1px 1px 3px 1px #101012;
+    -webkit-box-shadow: 1px 1px 3px 1px #101012;
+     box-shadow: 1px 1px 3px 1px #101012;
+    padding-top: 12px;
+    padding-left: 35px;
 }
 
-.header .logo {
-    float: left;
-    margin-top: 12px;
-    margin-left: 200px;
+.logoHeader {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+#nav-mobile {
+    padding-right: 35px
 }
 
 
@@ -47,4 +51,20 @@ body {
 
 .green {
     color: rgb(27, 212, 3);
+}
+
+@media only screen and (max-width: 601px){
+    .nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        /* height: 64px; */
+        line-height: 64px;
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        /* height: 64px; */
+        line-height: 64px;
+        float: right;
+    }
 }

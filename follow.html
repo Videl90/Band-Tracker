@@ -11,13 +11,25 @@
 </head>
 <body>
     <header>
-        <div class="row header">|
-            <div class="logo col s3">
-                <img src="Images_2/logo.png">
+        
+        <nav>
+            <div class="nav-wrapper">
+                
+                    <a href="#" class="logoHeader"><img src="Images/logo-header.png"/></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                   
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="events.html">events</a></li>
+                        <li><a href="follow.html">following</a></li>
+                    </ul>
             </div>
-            <!--<form class="col s5">-->
-            <!--</form>-->
-        </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">home</a></li>
+            <li><a href="events.html">events</a></li>
+            <li><a href="follow.html">following</a></li>
+        </ul>
     </header>
 
     
@@ -34,11 +46,18 @@
             </div>-->
         </div>
     </main>
-    
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
     <script src="follow.js"></script>
+    <script>
+    //COLLAPSIBLE MENU//
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            });
+    </script>
 
 </body>
 </html>

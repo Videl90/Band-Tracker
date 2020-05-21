@@ -10,21 +10,27 @@
     <link rel="stylesheet" type="text/css" href="styles_events.css" media="all" /> 
 </head>
 <body>
+
     <header>
-        <div class="row header">|
-            <div class="logo col s3">
-                <img src="Images_2/logo.png">
+        
+        <nav>
+            <div class="nav-wrapper">
+            <a href="#" class="logoHeader"><img src="Images/logo-header.png"/></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">home</a></li>
+                <li><a href="events.html">events</a></li>
+                <li><a href="follow.html">following</a></li>
+            </ul>
             </div>
-            <!--<form class="col s5">-->
-            <!--</form>-->
-        </div>
+        </nav>
+        
     </header>
 
     <div class="col s12 search" id="search">
         <div class="input-field col s2">
             <input id="icon_prefix" type="text" class="validate">
             <label for="icon_prefix"><i class="fas fa-search"></i></label>
-            <button id="bandSearch">Search</button>
+            <button id="bandSearch" class="waves-effect waves-light btn-small">SEARCH</button>
         </div>
     </div>
 
@@ -41,11 +47,11 @@
                                 <!--Div to insert the src of the band's media-->
                                 <div class="social-media" id="social-media">
                                     <div class="fb-logo col s4 m4 l4" id="fb-logo">
-                                        <a id="fblink"></a><img src="Images_2/fblogo.png"></a>
+                                        <a id="fblink" href="" target="_blank"><img src="Images_2/fblogo.png"></a>
                                     </div>
-                                    <div class="website-logo col s4 m4 l4" id="website-logo">
-                                        <a id="websitelink" href=""><img src="Images_2/website.png"></a>
-                                    </div>
+                                    <!--<div class="website-logo col s4 m4 l4" id="website-logo">
+                                        <a id="websitelink" href="" target="_blank"><img src="Images_2/website.png"></a>
+                                    </div>-->
                                 </div>
                                     <!--Button to follow the band (storage)-->
                                     <a href="#" id="follow" class="follow">FOLLOW +</a>
@@ -72,8 +78,8 @@
                     <div class="col s12">
                         <h5 class="about">SIMILAR ARTISTS</h5>
                         <!--Similar bands-->
-                        <div class="row" id="eachBand">
-                        </div>
+                        <div class="row" id="eachBand"></div>
+                        <div class="row" id="nextEvent"></div>
                     </div>
                 </div>
             </div>
@@ -83,8 +89,15 @@
                     <div class="col s12" id="concert-dates">
                         <h5 class="upcoming">UPCOMING DATES</h5>
                         <table class="table" id="table-info">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Location</th>
+                                    <th>City</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                
                                     <!--Button that sends you to the ticketmaster API-->
                                     <!--<td><button id="tickets">BUY TICKETS</button></td>-->
                                 

@@ -22,6 +22,7 @@ body {
     padding-right: 35px
 }
 
+
 .row .input-field {
     float: right;
     left: 230px;
@@ -53,16 +54,12 @@ body {
     height: auto;
 }
 
- #follow {
+.main-container .aside .row .col .card .card-image .band-info .col #follow {
     float: right;
     color: #FF6A48;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-}
 
-#follow:hover {
-    color: rgb(28, 196, 70);
-    transition: 0.2s;
 }
 
 .main-container .aside .row .col .card .card-image .band-info .col .social-media {
@@ -159,6 +156,7 @@ body {
     font-size: 14px;
 }
 
+
 /*Tickets Button*/
 .tickets {
     border-radius: 0.3em;
@@ -176,23 +174,21 @@ body {
     border: solid 1px rgb(28, 196, 70);
 }
 
+
 /*Search button*/
 #bandSearch {
-    border: 1px solid #FF6A48;
-    background-color: #1e2024;
+    border-radius: 0.3em;
     cursor: pointer;
+    background-color: transparent;
+    border: solid 1px #FF6A48;
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-}
-
-#bandSearch:hover{
-    background-color: #FF6A48;
+    color: #FF6A48;
+    padding: 5px;
 }
 
 .colorWhite {
     font-size: 16px;
     color: white;
-    font-weight: bold;
 }
 
 .colorOrange {
@@ -211,31 +207,60 @@ body {
 }
 
 #container {
-    display: none;
+    display: block;
 }
 
 .error-message {
     border: solid 1px #FF6A48;
     border-radius: 0.3em;
     padding: 20px;
-    height: 100px;
+    height: 300px;
     text-align: center;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    display: none;
-    width: 60%;
-    margin: 10px auto;
-    padding-top: 20px;
+    display: block;
 }
 
-.text {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+#button-add {
+    background-color: #FF6A48;
+    font-style: normal;
+    width: 40px;
+    height: 40px;
 }
 
-#nextEvent {
-    text-align: right;
-    margin-right: 16px;
+
+#button-rest {
+    background-color: #FF6A48;
+    font-style: normal;
+    width: 40px;
+    height: 40px;
+    margin-left:10px;
+}
+
+    
+}
+
+.material.icons {
+   
+    font-style: normal;
+}
+
+#counterNum {
+    font-size: 24px;
+    display: inline;
+    margin-left:10px;
+   
+}
+
+#buyButton {
+    margin-top: 35px;
+}
+
+@media only screen and (min-width: 601px){
+    .nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        /* height: 64px; */
+        line-height: 64px;
+        float: right;
+    }
 }
