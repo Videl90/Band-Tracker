@@ -36,7 +36,7 @@ $("#bandSearch").on('click',function(){
                 artistName = response.name;
                 var website = response.facebook_page_url;
                 var bandImage = response.image_url;
-                $(".artistNameSpan").append(artistName);
+                $(".artistNameSpan").text(artistName);
                 $("#fblink").attr('href',website);
                 $('#bandImage').attr('src',bandImage);
             } else {
